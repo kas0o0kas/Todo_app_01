@@ -1,0 +1,32 @@
+.footer {
+    text-align: center;
+    padding-top: 445px;
+    padding-bottom: 85px;
+
+    &.day {
+        background-color: $veryDarkBlue;
+    }
+
+    &.night {
+        background-color: $veryLightGrayishBlue;
+    }
+
+    &__text {
+        font-size: 14px;
+
+        &.day {
+            color: $darkGrayishBlue2;
+        }
+    
+        &.night {
+            color: $darkGrayishBlue1;
+        }
+
+        @include breakpoint_up(xlarge){
+            font-size: 16px;
+        }
+
+    }
+
+    
+}

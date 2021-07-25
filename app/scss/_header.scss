@@ -1,0 +1,58 @@
+.header {
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 32px;
+    padding-top: 45px;
+    padding-right: 32px;
+    padding-bottom: 130px;
+
+    &.day {
+        background-image: url(/images/bg-mobile-dark.jpg);
+    }
+
+    &.night {
+        background-image: url(/images/bg-mobile-light.jpg);
+    }
+
+    @include breakpoint_up(xlarge){
+        padding-left: 448px;
+        padding-top: 75px;
+        padding-right: 448px;
+        padding-bottom: 186px;
+    }
+
+    &__logo {
+        font-size: 26px;
+        color: $veryLightGray;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 5px;
+
+        @include breakpoint_up(xlarge){
+            font-size: 36px;
+        }
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &.day {
+            background-image: url(/images/icon-sun.svg);
+        }
+    
+        &.night {
+            background-image: url(/images/icon-moon.svg);
+        }
+
+        @include breakpoint_up(xlarge){
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+

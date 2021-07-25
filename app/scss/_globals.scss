@@ -1,0 +1,48 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+
+    @include breakpoint_up(xlarge){
+        font-size: 18px;
+    }
+}
+
+ul {
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+
+    @include breakpoint_up(xlarge){
+        font-size: 18px;
+    }
+    li:not(:first-child) {
+        
+        &.day {
+            border-top: solid 1px $lightGrayishBlue3;
+        }
+    
+        &.night {
+            border-top: solid 1px $darkGrayishBlue1;
+        }
+    }
+
+    li{
+        border-radius: 0 !important;
+    }
+
+    li:first-child{
+        border-radius: 5px 5px 0 0 !important;
+    }
+
+    li:last-child{
+        border-radius: 0 0 5px 5px !important;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/app/scss/style.css">
+  
+  <script type="text/javascript" src="/app/js/jquery-3.6.0.js"></script>
+  
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); font-size: 14px; text-decoration: none;}
+    .attribution a.coder { color: hsl(0, 75%, 48%); font-size: 16px; }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__logo">Todo</div>
+    <div class="header__icon"></div>
+  </header>
+
+  <section class="main">
+    <div class="main__input element__input element__todo">
+      <div class="input__checkbox element__checkbox">
+      </div>
+      <input type="text" class="input__text element__text" value="Create a new todo...">
+    </div>
+
+    <ul class="main__todoList">
+      
+    </ul>
+
+    <div class="main__control all element__todo">
+      <span class="control__all hover">All</span>
+      <span class="control__active hover">Active</span>
+      <span class="control__completed hover">Completed</span>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__text">Drag and Drop to Reorder List</div>
+  </footer>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a class="coder" href="#">Monkey_J</a>.
+  </div>
+
+  <script type="text/javascript" src="/app/js/app.js"></script>
+</body>
+</html>

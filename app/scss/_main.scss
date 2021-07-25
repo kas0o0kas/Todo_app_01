@@ -1,0 +1,173 @@
+.main {
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 110px;
+
+    @include breakpoint_up(xlarge){
+        width: 40%;
+        top: 158px;
+    }
+
+    .element__collect {
+        color: $darkGrayishBlue2;
+        justify-content: space-between;
+        padding-top: 17px !important;
+        padding-bottom: 17px !important;
+
+        .clear__item {
+            cursor: pointer;
+            &:hover {
+                color: $lightGrayishBlue3;
+            }
+        }
+    }
+    .element__todo {
+        display: flex;
+        align-items: center;
+        padding-left: 22px;
+        padding-top: 13px;
+        padding-right: 22px;
+        padding-bottom: 13px;
+        border-radius: 5px;
+
+        &.day {
+            background-color: $veryDarkDesaturatedBlue;
+        }
+    
+        &.night {
+            background-color: $veryLightGray;
+        }
+
+        @include breakpoint_up(xlarge){
+            padding: 22px;
+        }
+
+        &.completed{
+            .element__checkbox{
+                opacity: 1;
+                background-image: url(/images/icon-check.svg), linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+                background-repeat: no-repeat, no-repeat;
+                background-size: 50% cover;
+                background-position: 50% 50%, 50% 50%;
+            }
+
+            .element__text{
+                text-decoration: line-through;
+                &.day {
+                    color: $darkGrayishBlue2;
+                }
+            
+                &.night {
+                    color: $lightGrayishBlue1;
+                }
+            }
+        }
+
+        &.activated{
+            .element__text{
+                
+                &.day {
+                    color: $lightGrayishBlue2;
+                }
+            
+                &.night {
+                    color: $veryDarkGrayishBlue1;
+                }
+            }
+        }
+
+        .element__checkbox {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            margin-right: 10px;
+            opacity: 0.5;
+
+            &.day {
+                border: solid 1px $lightGrayishBlue3;
+            }
+        
+            &.night {
+                border: solid 1px $darkGrayishBlue1;
+            }
+
+            &.item__checkbox {
+                cursor: pointer;
+                &:hover {
+                    border-color: $brightBlue;
+                }
+            }
+        }
+
+        .element__text {
+            outline: none;
+            border: 0;
+            width: 86%;
+
+            &.day {
+                color: $darkGrayishBlue2;
+                background-color: $veryDarkDesaturatedBlue;
+            }
+        
+            &.night {
+                color: $darkGrayishBlue1;
+                background-color: $veryLightGray;
+            }
+            
+            &.item__text {
+                cursor: pointer;
+            }
+        
+        }
+
+        .element__cross {
+            cursor: pointer;
+        }
+    }
+
+    &__todoList {
+        margin-top: 16px;
+        margin-bottom: 16px;
+
+        @include breakpoint_up(xlarge){
+            margin-top: 26px;
+            margin-bottom: 26px;
+        }
+    }
+
+    &__control {
+        display: block !important;
+        font-weight: 700;
+        text-align: center;
+
+        &.day {
+            color: $veryDarkGrayishBlue2;
+        }
+    
+        &.night {
+            color: $darkGrayishBlue1;
+        }
+
+        span:not(:last-child){
+            margin-right: 16px;
+        }
+
+        span {
+            cursor: pointer;
+            &.hover {
+                &.day:hover {
+                    color: $lightGrayishBlue3;
+                }
+            
+                &.night:hover {
+                    color: $veryDarkGrayishBlue1;
+                } 
+            }
+            &.active {
+                color: $brightBlue;
+            }
+        }
+    }
+}
